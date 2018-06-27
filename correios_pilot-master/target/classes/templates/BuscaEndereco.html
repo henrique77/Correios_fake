@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutPadrao">
+<head>
+<meta charset="utf8">
+<title>BuscaEndereco</title>
+</head>
+
+<section layout:fragment="conteudo">
+			<div class="ctrlcontent">
+				<!-- inicio borda -->
+					<form name="Geral" id="Geral" 
+						th:action="@{/buscaEndereco/resultadoBuscaEndereco/}" method="get">
+							<p>Faça suas consultas individuais de CEP, destinadas a 
+								endereçamentos de objetos de correspondências a serem 
+								postadas nos Correios. Os campos assinalados com (*) são obrigatórios.</p>
+							<div class="form">
+								<div class="contentform">
+									
+																		
+									<div class="separator"></div>
+									
+										<span><font color="#1874CD"><br> Ajuda<br></font>
+											<label>  
+											<span><font color="#000000"><br>CEP *:<br></font>
+												<input align="left" maxlength="60" name="parametro1" size="8" value="">
+											</label>
+										
+										</span>
+																				
+									<div class="separator"></div>
+									<p th:text="${mensagem}" style="color: #a94442"></p>
+											
+									<div class="btnform">
+										<input type="Submit" value="Buscar" class="btn2 float-right">
+									</div>  
+						<div></div></div>
+							</div>						
+					</form>
+
+				<h4>Uso do Busca CEP</h4>
+				<p>
+					O uso deste aplicativo é restrito a consultas individuais de CEP,
+					destinadas a endereçamentos de objetos de correspondências a serem
+					postadas nos Correios. Para outras finalidades consulte o <a
+						href="http://www.correios.com.br/para-voce/correios-de-a-a-z/e-dne">e-DNE.</a>
+				</p>
+			</div>
+	
+</section>
+
+</body>
+</html>
